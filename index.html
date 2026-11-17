@@ -25,6 +25,13 @@
                 <option value="terminée">Terminée</option>
                 <option value="bloquée">Bloquée</option>
             </select>
+                <label for="priorite">Priorité</label>
+                <select id="priorite">
+                    <option value="haute">Haute</option>
+                    <option value="moyenne" selected>Moyenne</option>
+                    <option value="basse">Basse</option>
+                </select>
+
             <p id="form-error"></p>
             <button type="submit">Ajouter</button>
         </form>
@@ -37,9 +44,25 @@
                 <option value="terminée">Terminée</option>
                 <option value="bloquée">Bloquée</option>
             </select>
+            <label for="filtre-priorite">Filtrer par priorité</label>
+            <select id="filtre-priorite">
+                <option value="toutes">Toutes</option>
+                <option value="haute">Haute</option>
+                <option value="moyenne">Moyenne</option>
+                <option value="basse">Basse</option>
+            </select>
+
+            <label for="tri">Trier</label>
+            <select id="tri">
+                <option value="manuel">Ordre manuel</option>
+                <option value="priorite">Par priorité</option>
+            </select>
+
             <label for="recherche">Rechercher</label>
             <input type="text" id="recherche">
         </section>
+        <div id="stats"></div>
+
         <p id="empty-message">Aucune tâche pour le moment.</p>
         <div id="task-list"></div>
     </main>
